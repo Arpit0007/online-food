@@ -7,14 +7,14 @@ import { EditProductsComponent } from './view/products/edit-products/edit-produc
 import { ProductsDetailComponent } from './view/products/products-list/products-detail/products-detail.component';
 export const rootRouterConfig: Routes = [
     {
-        path: "",
-        redirectTo: "signin",
-        pathMatch: "full"
+        path: '',
+        redirectTo: 'signin',
+        pathMatch: 'full'
     },
     { path: 'signin', component: SinginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'add-products', component: AddProductsComponent },
-    { path: 'edit-products', component: EditProductsComponent },
+    { path: 'edit-products/:id/:name', component: EditProductsComponent },
     { path: 'products-list', component: ProductsListComponent },
-    { path: 'product-detail/:id', component: ProductsDetailComponent },
+    { path: 'product-detail/:id/edit', component: ProductsDetailComponent },
 ];
