@@ -6,10 +6,15 @@ import { ProductsListComponent } from './view/products/products-list/products-li
 import { EditProductsComponent } from './view/products/edit-products/edit-products.component';
 import { ProductsDetailComponent } from './view/products/products-list/products-detail/products-detail.component';
 export const rootRouterConfig: Routes = [
-    { path: '', component: SinginComponent },
+    {
+        path: "",
+        redirectTo: "signin",
+        pathMatch: "full"
+    },
+    { path: 'signin', component: SinginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'add-products', component: AddProductsComponent },
     { path: 'edit-products', component: EditProductsComponent },
     { path: 'products-list', component: ProductsListComponent },
-    { path: 'product-detail/:id', component: ProductsDetailComponent},
+    { path: 'product-detail/:id', component: ProductsDetailComponent },
 ];

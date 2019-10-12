@@ -36,7 +36,7 @@ export class SinginComponent implements OnInit {
         this.result = response;
       },
     );
-    alert(this.result.error);
+    // alert(this.result.error);
     console.log(this.result);
    // localStorage.setItem('token', this.dataSource.length);
   }
