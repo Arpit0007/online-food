@@ -15,6 +15,9 @@ export const rootRouterConfig: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'add-products', component: AddProductsComponent },
     { path: 'edit-products/:id/:name', component: EditProductsComponent },
-    { path: 'products-list', component: ProductsListComponent },
-    { path: 'product-detail/:id/edit', component: ProductsDetailComponent },
+    { path: 'products-list', component: ProductsListComponent, children: [
+        { path: ':id/:name', component: ProductsDetailComponent }
+    ]},
+    
+    // { path: 'product-detail/:id/edit', component: ProductsDetailComponent },
 ];
