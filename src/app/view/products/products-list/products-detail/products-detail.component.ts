@@ -16,10 +16,9 @@ export class ProductsDetailComponent implements OnInit {
     //   name: this.activeroute.snapshot.params['name']
     // };
     this.activeroute.params.subscribe((params: Params) => {
-      this.id = params["id"];
-      console.log("this.id", this.id);
-      
-    })
+      this.id = params['id'];
+      console.log(this.id);
+    });
   }
 
 }

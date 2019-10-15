@@ -17,6 +17,9 @@ import { AddProductsComponent } from './view/products/add-products/add-products.
 import { ProductsListComponent } from './view/products/products-list/products-list.component';
 import { EditProductsComponent } from './view/products/edit-products/edit-products.component';
 import { ProductsDetailComponent } from './view/products/products-list/products-detail/products-detail.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import { ProductsDetailComponent } from './view/products/products-list/products-
     AddProductsComponent,
     ProductsListComponent,
     EditProductsComponent,
-    ProductsDetailComponent
+    ProductsDetailComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ import { ProductsDetailComponent } from './view/products/products-list/products-
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
-    LoginService,
+    LoginService, AuthGuardService, AuthService
     // {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
