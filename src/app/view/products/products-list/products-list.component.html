@@ -42,7 +42,10 @@
                   <td><a [routerLink]="['/products-list', 1,'arpit']">{{product.name}}</a></td>
                   <td>{{product.price}}</td>
                   <td>{{product.detail}} </td>
-                  <td><button (click)="editrouter()" class="btn btn-danger">X</button></td>
+                  <td>
+                    <button (click)="editrouter(product.id)" class="btn btn-info">edit</button>
+                    <button (click)="editrouter()" class="btn btn-danger">X</button>
+                  </td>
                 </tr>
                 <tr>
                   <td><router-outlet></router-outlet></td>

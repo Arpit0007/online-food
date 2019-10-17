@@ -15,7 +15,8 @@ export const rootRouterConfig: Routes = [
     },
     { path: 'signin', component: SinginComponent },
     { path: 'home', component: HomeComponent },
-    { path: 'add-products', canActivate: [AuthGuardService], component: AddProductsComponent },
+    { path: 'add-products', component: AddProductsComponent },
+    // { path: 'add-products', canActivate: [AuthGuardService], component: AddProductsComponent },
     { path: 'edit-products/:id/:name', component: EditProductsComponent },
     { path: 'products-list', component: ProductsListComponent, children: [
         { path: ':id/:name', component: ProductsDetailComponent }

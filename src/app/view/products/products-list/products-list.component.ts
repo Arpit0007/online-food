@@ -17,4 +17,7 @@ export class ProductsListComponent implements OnInit {
     addProduct() {
       this.router.navigate(['/add-products']);
     }
+    editrouter() {
+      
+    }
   }
