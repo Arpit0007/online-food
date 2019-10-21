@@ -7,7 +7,7 @@ import { ProductsService } from '../../../services/products.service';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent implements OnInit {
-  products : any;
+  products: any;
   constructor( private productList: ProductsService,
                private router: Router
              ) { }
@@ -17,7 +17,7 @@ export class ProductsListComponent implements OnInit {
     addProduct() {
       this.router.navigate(['/add-products']);
     }
-    editrouter() {
-      
+    editrouter(id, name) {
+      this.router.navigate(['/edit-products/' + id + '/' +  name + '']);
     }
   }
