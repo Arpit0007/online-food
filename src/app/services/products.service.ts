@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProductsService {
   constructor() { }
-  private  product_data = [
+  private product_data = [
     {
       id: 1,
       name: 'graps',
@@ -14,8 +14,8 @@ export class ProductsService {
     },
     {
       id: 1,
-      name: 'graps',
-      price: '24kg',
+      name: 'banana',
+      price: '22kg',
       detail : 'Fresh',
     }
   ];
