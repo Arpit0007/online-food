@@ -28,8 +28,9 @@ export class SinginComponent implements OnInit {
     }
     this.success = true;
     this.loginData = {
-      email : this.loginForm.get('email').value,
-      password: this.loginForm.get('password').value
+      username: this.loginForm.get('email').value,
+      password: this.loginForm.get('password').value,
+      device_id: 'sfanjd$%$%$#22166r84472%$%$##'
     };
     this.loginservice.checkLogin(this.loginData).subscribe(
       response => {
