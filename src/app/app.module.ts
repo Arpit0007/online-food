@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
+import { FormsModule } from '@angular/forms';
 // import {APP_BASE_HREF} from '@angular/common';
 
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ import { AuthService } from './services/auth.service';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
